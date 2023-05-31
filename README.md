@@ -1,5 +1,5 @@
-# Assignment 5
-This is the 5th assignment of the Algorithms and Data Structure course
+# Assignment 6
+This is the 6th assignment of the Algorithms and Data Structure course
 
 ## Weighted Graph Algorithms
 
