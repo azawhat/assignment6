@@ -1,4 +1,4 @@
-class Edge<T> {
+class Edge<T> { // Class representing an edge between two vertices with a weight
     private Vertex<T> source;
     private Vertex<T> destination;
     private int weight;

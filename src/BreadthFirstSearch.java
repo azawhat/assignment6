@@ -1,10 +1,11 @@
 import java.util.*;
+// Class implementing breadth-first search on a graph
 class BreadthFirstSearch<T> extends Search<T> {
     public BreadthFirstSearch(WeightedGraph<T> graph) {
         super(graph);
     }
 
-    public void bfs(Vertex<T> start) {
+    public void bfs(Vertex<T> start) { // Perform breadth-first search traversal on the graph
         validateVertex(start);
 
         Map<Vertex<T>, Boolean> visited = new HashMap<>();
@@ -31,7 +32,7 @@ class BreadthFirstSearch<T> extends Search<T> {
         }
     }
 
-    private void validateVertex(Vertex<T> vertex) {
+    private void validateVertex(Vertex<T> vertex) { // Validate if a vertex is present in the graph
         if (!graph.adjacencyList.containsKey(vertex)) {
             throw new IllegalArgumentException("Vertex " + vertex + " is out of range");
         }

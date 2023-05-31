@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Vertex<T> {
+class Vertex<T> { // Class representing a vertex in the graph
     private T data;
 
     public Vertex(T data) {

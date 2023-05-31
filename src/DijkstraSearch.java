@@ -1,6 +1,6 @@
 import java.util.*;
 
-class DijkstraSearch<T> extends Search<T> {
+class DijkstraSearch<T> extends Search<T> { // Class implementing Dijkstra's algorithm for finding the shortest path in a graph
     private Map<Vertex<T>, Integer> distances;
     private Map<Vertex<T>, Vertex<T>> parents;
 
@@ -8,7 +8,7 @@ class DijkstraSearch<T> extends Search<T> {
         super(graph);
     }
 
-    public void dijkstra(Vertex<T> start) {
+    public void dijkstra(Vertex<T> start) {// Perform Dijkstra's algorithm on the graph starting from the specified vertex
         validateVertex(start);
 
         distances = new HashMap<>();
@@ -40,12 +40,12 @@ class DijkstraSearch<T> extends Search<T> {
         }
     }
 
-    public int getShortestDistance(Vertex<T> vertex) {
+    public int getShortestDistance(Vertex<T> vertex) { // Get the shortest distance to the specified vertex from the start vertex
         validateVertex(vertex);
         return distances.get(vertex);
     }
 
-    public List<Vertex<T>> getShortestPath(Vertex<T> vertex) {
+    public List<Vertex<T>> getShortestPath(Vertex<T> vertex) { // Get the shortest path to the specified vertex from the start vertex
         validateVertex(vertex);
 
         List<Vertex<T>> path = new LinkedList<>();
@@ -59,7 +59,7 @@ class DijkstraSearch<T> extends Search<T> {
         return path;
     }
 
-    private void validateVertex(Vertex<T> vertex) {
+    private void validateVertex(Vertex<T> vertex) { // Validate if a vertex is present in the graph
         if (!graph.adjacencyList.containsKey(vertex)) {
             throw new IllegalArgumentException("Vertex " + vertex + " is out of range");
         }
