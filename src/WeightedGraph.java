@@ -1,6 +1,6 @@
 import java.util.*;
 class WeightedGraph<T> {
-    private Map<Vertex<T>, List<Edge<T>>> adjacencyList;
+    public Map<Vertex<T>, List<Edge<T>>> adjacencyList;
 
     public WeightedGraph() {
         adjacencyList = new HashMap<>();
